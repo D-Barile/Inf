@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+#nav{
+	background: #f3f3f3;
+	padding: 8px;
+}
+
+#title{
+	display: contents;
+    font-style: italic;
+    font-size: 30px;
+    letter-spacing: 10px;
+    color: #c58200;
+    font-family: system-ui;
+}
