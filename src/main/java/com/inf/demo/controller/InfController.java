@@ -23,8 +23,6 @@ public class InfController {
 	@Autowired
 	private VideogameRepository videogameRepository;
 	
-	
-	
 	@GetMapping("/home")
 	public String getHome(Model modelAnime, Model modelVideogames) {
 		ModelAndView mvanime = new ModelAndView();
@@ -63,7 +61,7 @@ public class InfController {
 	}
 	
 	@PostMapping("add-videogame")
-	public String addAnime(Videogame videogame) {
+	public String addVideogame(Videogame videogame) {
 		videogameRepository.save(videogame);
 		return "redirect:/home";
 	}
