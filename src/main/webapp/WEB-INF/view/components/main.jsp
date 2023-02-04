@@ -7,7 +7,7 @@
 			<img src="${anime.getImg()}" width="180px" height="280px" />
 			<br />
 			<a class="action btn" href="delete-anime/${anime.getId()}">Elimina</a>
-			<a class="action btn" href="/">Aggiorna</a>
+			<a class="action btn" href="update-anime/${anime.getId()}">Aggiorna</a>
 		</div>
 	</c:forEach>
 	<c:forEach var="videogames" items="${videogames}">

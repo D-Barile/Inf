@@ -13,6 +13,7 @@
 	</head>
 	<body style="margin: 0;">
 			<jsp:include page="components/navbar.jsp"></jsp:include>
+			<hr />
 			<div>
 				<jsp:include page="components/sidebar.jsp"></jsp:include>
 				<jsp:include page="components/main.jsp"></jsp:include>

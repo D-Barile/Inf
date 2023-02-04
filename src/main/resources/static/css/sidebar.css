@@ -23,3 +23,8 @@ a{
 	text-decoration: none;
 	color: black;
 }
+
+hr{
+    margin: 0;
+    border: solid 1px #c5820029;
+}
