@@ -5,9 +5,9 @@
 	padding: 10px;
 }
 
-input{
+.input{
 	margin: 20px 0;
-	background: none;
+	background: white;
 }
 
 input[type=submit]{

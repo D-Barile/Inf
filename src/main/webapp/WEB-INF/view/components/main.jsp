@@ -6,7 +6,7 @@
 			<h3>Episodi: ${anime.getEpisodes()}</h3>
 			<img src="${anime.getImg()}" width="180px" height="280px" />
 			<br />
-			<a class="action btn" href="/">Elimina</a>
+			<a class="action btn" href="delete-anime/${anime.getId()}">Elimina</a>
 			<a class="action btn" href="/">Aggiorna</a>
 		</div>
 	</c:forEach>
@@ -16,7 +16,7 @@
 			<h3>Pegi ${videogames.getPegi()}+</h3>
 			<img src="${videogames.getImg()}" width="180px" height="280px" />
 			<br />
-			<a class="action btn" href="/">Elimina</a>
+			<a class="action btn" href="delete-videogame/${videogames.getId()}">Elimina</a>
 			<a class="action btn" href="/">Aggiorna</a>
 		</div>
 	</c:forEach>
