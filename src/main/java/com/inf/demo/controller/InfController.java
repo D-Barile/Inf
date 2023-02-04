@@ -3,11 +3,14 @@ package com.inf.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigurationImportEvent;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.inf.demo.dao.AnimeRepository;
@@ -77,6 +80,32 @@ public class InfController {
 	public String deleteVideogame(@PathVariable int id) {
 		Videogame videogame = videogameRepository.getReferenceById(id);
 		videogameRepository.delete(videogame);
+		return "redirect:/home";
+	}
+	
+	@GetMapping("update-anime/{id}")
+	public String updateAnimeForm(@PathVariable int id, Model model) {
+		Anime anime = animeRepository.findById(id).get();
+		model.addAttribute("anime", anime);
+		return "/components/update-anime-form";
+	}
+	
+	@PostMapping("/update-anime/{id}")
+	public String updateAnime(Anime anime) {
+		animeRepository.save(anime);
+		return "redirect:/home";
+	}
+	
+	@GetMapping("update-videogame/{id}")
+	public String updateVideogameForm(@PathVariable int id, Model model) {
+		Videogame videogame = videogameRepository.findById(id).get();
+		model.addAttribute("videogame", videogame);
+		return "/components/update-videogame-form";
+	}
+	
+	@PostMapping("/update-videogame/{id}")
+	public String updateVideogame(Videogame videogame) {
+		videogameRepository.save(videogame);
 		return "redirect:/home";
 	}
 
