@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>INF - Aggiorna anime</title>
 	</head>
 	<body>
 		<form action="/update-anime/${anime.getId()}" method="post">
