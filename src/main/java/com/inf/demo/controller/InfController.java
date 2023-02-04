@@ -8,12 +8,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.inf.demo.dao.AnimeRepository;
 import com.inf.demo.dao.VideogameRepository;
 import com.inf.demo.model.Anime;
 import com.inf.demo.model.Videogame;
+
+import aj.org.objectweb.asm.Type;
 
 @Controller
 public class InfController {
@@ -104,6 +107,13 @@ public class InfController {
 	public String updateVideogame(Videogame videogame) {
 		videogameRepository.save(videogame);
 		return "redirect:/home";
+	}
+	
+	@GetMapping("/search")
+	public String search(@RequestParam String name, Model model) {
+		model.addAttribute("anime", animeRepository.findByNameContaining(name));
+		model.addAttribute("videogames", videogameRepository.findByNameContaining(name));
+		return "index";
 	}
 
 }
