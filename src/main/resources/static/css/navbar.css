@@ -7,9 +7,9 @@
 
 #title{
 	display: contents;
+	font-family: fantasy;
     font-style: italic;
     font-size: 30px;
-    letter-spacing: 10px;
+    letter-spacing: 22px;
     color: #c58200;
-    font-family: system-ui;
 }

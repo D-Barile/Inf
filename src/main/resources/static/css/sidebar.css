@@ -2,11 +2,12 @@
 
 #sidebar{
 	width: 16%;
+	float: left;
     text-align: -webkit-center;
    	background: #f3f3f3;
 }
 
-.cat{
+#btns{
     padding: 4px 2px;
 }
 

@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class Anime {
@@ -14,6 +15,7 @@ public class Anime {
 	private int id;
 	private String name;
 	private int episodes;
+	@Lob
 	@Column(columnDefinition = "BLOB")
 	private String img;
 	
@@ -41,4 +43,5 @@ public class Anime {
 	public void setImg(String img) {
 		this.img = img;
 	}
+
 }

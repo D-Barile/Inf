@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+.add{
+	margin: 0;
+	padding: 10px;
+}
+
+input{
+	margin: 20px 0;
+	background: none;
+}
+
+input[type=submit]{
+	box-sizing: unset;
+}
