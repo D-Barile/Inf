@@ -38,6 +38,24 @@ public class InfController {
 		return "index";
 	}
 	
+	@GetMapping("/anime")
+	public String getAllAnime(Model model) {
+		ModelAndView mv = new ModelAndView();
+		List<Anime> anime = animeRepository.findAll();
+		model.addAttribute("anime", anime);
+		mv.addObject(anime);
+		return "index";
+	}
+	
+	@GetMapping("/videogames")
+	public String getAllVideogames(Model model) {
+		ModelAndView mv = new ModelAndView();
+		List<Videogame> videogames = videogameRepository.findAll();
+		model.addAttribute("videogames", videogames);
+		mv.addObject(videogames);
+		return "index";
+	}
+	
 	@PostMapping("add-anime")
 	public String addAnime(Anime anime) {
 		animeRepository.save(anime);

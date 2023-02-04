@@ -8,8 +8,7 @@
 	</div>
 	<hr />
 	<div id="btns">
-		<h3><a class="btn" href="/">Anime</a></h3>
-		<h3><a class="btn" href="/">Videogiochi</a></h3>
-		<h3><a class="btn" href="/">Preferiti</a></h3>
+		<h3><a class="btn" href="anime">Anime</a></h3>
+		<h3><a class="btn" href="/videogames">Videogiochi</a></h3>
 	</div>
 </div>
