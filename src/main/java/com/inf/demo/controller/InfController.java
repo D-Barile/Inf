@@ -16,8 +16,6 @@ import com.inf.demo.dao.VideogameRepository;
 import com.inf.demo.model.Anime;
 import com.inf.demo.model.Videogame;
 
-import aj.org.objectweb.asm.Type;
-
 @Controller
 public class InfController {
 	
